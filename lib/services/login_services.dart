@@ -5,7 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:http/http.dart' as http;
+import 'package:products/screens/login/Login_screen.dart';
 import 'package:products/screens/product_screen/product_screen.dart';
+
+import '../screens/ChoiceScreen/ChoiceScreen.dart';
 class LoginServices{
   final apiKey="https://dummyjson.com/auth/login";
   login(BuildContext context ,username,password)async{
@@ -15,7 +18,7 @@ class LoginServices{
         // "username": "kminchelle", // "password": "0lelplR",
     final response=await http.post(Uri.parse(apiKey),body: jsonEncode(body),headers: headers);
     if(response.statusCode==200){
-      Get.to(ProductScreen());
+      Get.to(ChoiceScreen());
     }
     else
       {
@@ -39,8 +42,7 @@ return showModalBottomSheet(context:context,
             SizedBox(height: 16.0),
             ElevatedButton(
               onPressed: () {
-
-                Navigator.pop(context); // Dismiss the bottom sheet
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginScreen())); // Dismiss the bottom sheet
               },
               style:ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(Colors.blueGrey),) ,
               child: Text('OK'),
