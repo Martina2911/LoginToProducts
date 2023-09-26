@@ -8,9 +8,8 @@ class ProductController extends GetxController{
  final prod=<Products>[].obs;
  ProductServices services=ProductServices();
 
- fetchPr()async{
-  prod.value= (await services.fetchProducts())!;
- }
+ fetchPr()async
+ {prod.value= (await services.fetchProducts())!;}
 
  @override
  onInit()  async {

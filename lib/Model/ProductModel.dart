@@ -161,7 +161,6 @@ Products copyWith({  num? id,
 */
 class ProductModel {
   List<Products>? products;
-  //List<Products> products = [];
   int? total;
   int? skip;
   int? limit;
@@ -248,3 +247,6 @@ class Products {
     return data;
   }
 }
+
+//request => response to model
+//{]

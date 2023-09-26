@@ -78,7 +78,9 @@ class ProductScreen extends StatelessWidget {
               Get.to(DetailPage(index: index,));
             },
             child:
-              customCard(image: con.prod[index].images!.first.toString(), name: 'Product ${index+1}: ${con.prod[index].title}', price: 'Price: ${con.prod[index].price}',));
+              customCard(image: con.prod[index].images!.first.toString(),
+                name: 'Product ${index+1}: ${con.prod[index].title}',
+                price: 'Price: ${con.prod[index].price}',));
 
             // return Card(
             //   child: Column(

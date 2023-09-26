@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:products/screens/Map.dart';
 import 'package:products/screens/login/Login_screen.dart';
-import 'package:products/screens/product_screen/product_screen.dart';
+import 'package:products/screens/TabBarScreen/TabBarScreen.dart';
 
 void main() {
   runApp(const MyApp());
